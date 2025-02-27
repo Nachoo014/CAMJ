@@ -48,7 +48,7 @@ function Links() {
         {enlaces.map((e) => (
               <Link
               
-              className="m-[20px] w-[90%] border-4 rounded-md flex flex-col items-center justify-center text-center text-1xl md:text-2xl xl:text-3xl h-full p-4  hover:bg-[#15171c] hover:text-[#ffe7d1] transform scale-100 transition duration-500 hover:scale-105"
+              className="m-[20px] w-[90%] h-[200px] border-4 rounded-md flex flex-col items-center justify-center text-center text-1xl md:text-2xl xl:text-3xl p-4  hover:bg-[#15171c] hover:text-[#ffe7d1] transform scale-100 transition duration-500 hover:scale-105"
               style={{ borderColor: "#15171c" }}
               key={e.id}
               to={e.href}

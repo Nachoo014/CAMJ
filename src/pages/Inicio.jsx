@@ -2,14 +2,14 @@ import React from 'react'
 import './Inicio.css'
 import * as motion from "motion/react-client"
 import Links from '../components/Links'
-
+import FondoInicio from '../assets/FondoInicio.jpg'
 
 function Inicio() {
   return (
     <>
    <div className="relative h-200px w-full max-w-[1440px]">
   {/* Imagen de fondo */}
-  <div  className="absolute inset-0 bg-[url('https://www.undp.org/sites/g/files/zskgke326/files/migration/sv/figure-justice-holding-scales-sword.jpg')] bg-cover bg-center bg-no-repeat"></div>
+  <div  className="absolute inset-0 bg-[url('./assets/FondoInicio.jpg')] bg-cover bg-center bg-no-repeat"></div>
 
   {/* Overlay con opacidad */}
   <div className="absolute inset-0 bg-black opacity-70"></div>
