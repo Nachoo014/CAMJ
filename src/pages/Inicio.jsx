@@ -2,12 +2,12 @@ import React from 'react'
 import './Inicio.css'
 import * as motion from "motion/react-client"
 import Links from '../components/Links'
-import FondoInicio from '../assets/FondoInicio.jpg'
+import TramitesMatricula from '../components/TramitesMatricula'
 
 function Inicio() {
   return (
     <>
-   <div className="relative h-200px w-full max-w-[1440px]">
+   <div className="relative h-screen w-full max-w-[1440px]">
   {/* Imagen de fondo */}
   <div  className="absolute inset-0 bg-[url('./assets/FondoInicio.jpg')] bg-cover bg-center bg-no-repeat"></div>
 
@@ -21,6 +21,7 @@ function Inicio() {
   </div>
 </div>
 <Links></Links>
+<TramitesMatricula></TramitesMatricula>
     </>
   )
 }
