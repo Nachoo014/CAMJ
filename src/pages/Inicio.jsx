@@ -3,7 +3,7 @@ import './Inicio.css'
 import * as motion from "motion/react-client"
 import Links from '../components/Links'
 import TramitesMatricula from '../components/TramitesMatricula'
-
+import DelegacionCorral from '../components/DelegacionCorral'
 function Inicio() {
   return (
     <>
@@ -22,6 +22,7 @@ function Inicio() {
 </div>
 <Links></Links>
 <TramitesMatricula></TramitesMatricula>
+<DelegacionCorral/>
     </>
   )
 }
