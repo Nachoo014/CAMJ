@@ -17,8 +17,9 @@ function DelegacionCorral() {
          initial={{ opacity: 0, x: -100 }} 
          whileInView={{ opacity: 1, x: 0, transition: { duration: 0.4 } }}
         className='w-[100%] max-w-[1440px] p-[25px] flex justify-center items-center text-center text-3xl md:text-4xl xl:text-5xl font-bold'>Delegación Corral de Bustos Ifflinger</motion.h1>
-        <div className='flex flex-col xl:flex-row justify-between items-center px-[100px] '>
-            {noticiasDelegacion.map((nd)=>(<motion.div
+        <div className='flex flex-col w-full xl:flex-row justify-between items-center px-[100px] '>
+            {noticiasDelegacion.map((nd)=>(
+            <motion.div
              initial={{ opacity: 0, y: -100 }} 
              whileInView={{ opacity: 1, y: 0, transition: { duration: 1.0 } }}
             className='w-[300px] h-[490px] m-[20px] bg-[#23272F] flex flex-col items-center rounded-[5px]' >
@@ -28,7 +29,7 @@ function DelegacionCorral() {
                 <Link to={`/noticias/${nd.id}`} className="bg-[#f4f4f4] text-[#15171C] transform scale-100 transition duration-500 hover:scale-90 text- m-auto text-center w-[50%] rounded-[5px] ">Leer más</Link>
 
                 
-                </motion.div>))}
+            </motion.div>))}
                 
         </div>
         <motion.div
