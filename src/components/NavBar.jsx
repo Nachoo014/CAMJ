@@ -30,7 +30,7 @@ function NavBar() {
     },
   ];
     return (
-        <div className="z-50 absolute w-[100%] max-w-[1440px] flex justify-between items-center text-black py-6 px-8 md:px-32 bg-[#ffe7d1] drop-shadow-md">
+        <div className="z-50 w-[100%] max-w-[1440px] flex justify-between items-center text-black py-6 px-8 md:px-32 bg-[#ffe7d1] drop-shadow-md">
           <h1 className="text-3xl font-bold">Logo</h1>
           <div className="hidden xl:flex items-center gap-12 font-semibold text-base">
             {links.map((l) => (
@@ -48,7 +48,7 @@ function NavBar() {
             className="xl:hidden block text-5xl cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen, console.log(isMenuOpen))}
           />
-          <div className={`absolute z-50 xl:hidden top-24 left-0 w-full bg-[#ffe7d1] flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "opacity-0"}`}
+          <div className={`absolute z-5 xl:hidden top-24 left-0 w-full bg-[#ffe7d1] flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100 z-50" : "opacity-0"}`}
             style={{transition: "transform 0.3s ease, opacity 0.3s ease"}}
           >
              {links.map((l) => (
