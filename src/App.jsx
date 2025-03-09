@@ -9,6 +9,7 @@ import NavBar from './components/NavBar';
 import ScrollTop from './components/ScrollTop';
 import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
+import Enlaces from './pages/Enlaces';
 function App() {
 
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/Directorio" element={<Directorio />} />
+          <Route path="/Links" element={<Enlaces/>} />
           <Route path="/noticias" element={<Noticias />} />
           <Route path="/noticias/:id" element={<Noticia />} />
           <Route path="*" element={<NotFound />} />
