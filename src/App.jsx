@@ -12,6 +12,21 @@ import Footer from './components/Footer';
 import Enlaces from './pages/Enlaces';
 import Padron from './pages/Padron';
 import Jurisprudencia from './pages/Jurisprudencia';
+import Requisitosparamatricularse from './pages/Requisitosparamatricularse';
+import AfiliarseCajaAbogados from './pages/AfiliarseCajaAbogados';
+import ReqMatriculaTransitoria from './pages/ReqMatriculaTransitoria';
+import Solicitudcertificadodematricula from './pages/Solicitudcertificadodematricula';
+
+
+
+
+
+
+
+
+
+
+
 function App() {
 
   return (
@@ -25,6 +40,10 @@ function App() {
           <Route path="/Links" element={<Enlaces/>} />
           <Route path="/Padron" element={<Padron/>} />
           <Route path="/Jurisprudencia" element={<Jurisprudencia/>} />
+          <Route path="/Requisitosparamatricularse" element={<Requisitosparamatricularse/>} />
+          <Route path="/RequisitosparaMatriculaTransitoria" element={<ReqMatriculaTransitoria/>} />
+          <Route path="/AfiliarsealaCajadeAbogados" element={<AfiliarseCajaAbogados/>} />
+          <Route path="/Solicitudcertificadodematricula" element={<Solicitudcertificadodematricula/>} />
           <Route path="/noticias" element={<Noticias />} />
           <Route path="/noticias/:id" element={<Noticia />} />
           <Route path="*" element={<NotFound />} />

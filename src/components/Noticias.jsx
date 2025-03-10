@@ -14,43 +14,16 @@ import "./Style.css"
 
 function Noticias() {
     const noticias = [
+     
       {
           id:1,
-          img:magistraturaCBA,
-          titulo:"Renovación Consejo de la Magistratura provincial",
-          fecha:"25 de septiembre de 2023",
-          resumen:"El Tribunal Superior de Justicia (TSJ) convocó a elecciones para designar a miembros titulares y suplentes del Consejo de la Magistratura e integran",
-      },
-      {
-          id:2,
-          img:planos,
-          titulo:"Construcción de Tribunales Corral de Bustos",
-          fecha:"6 de octubre de 2023",
-          resumen:"Publicamos los Planos y el Estudio de Suelo de la obra de construcción del nuevo edificio de Tribunales Corral de Bustos - Iflinger a fines de colab",
-      },
-      {
-          id:3,
-          img:defninez,
-          titulo:"Inscripciones Jornadas Preparatorias: Congreso Arg. s/ Def. Téc. de la Niñez",
-          fecha:"31 de octubre de 2023",
-          resumen:"Durante la feria judicial de enero del 2024 la Sede Central del Colegio de Abogados de Marcos Juárez y su Delegación Corral de Bustos permanecerán" ,
-      },
-      {
-          id:4,
-          img:feria2024,
-          titulo:"Nómina de autoridades en funciones en enero 2024",
-          fecha:"30 de diciembre de 2023",
-          resumen:"Durante la feria judicial de enero del 2024 la Sede Central del Colegio de Abogados de Marcos Juárez y su Delegación Corral de Bustos permanecerán" ,
-      },
-      {
-          id:5,
           img:diaAbogacia,
           titulo:"Día de la Abogacía 2024",
           fecha:"29 de agosto de 2024",
           resumen:"En esta fecha, en nuestro día, es inevitable hacer balances y exponer un panorama sobre el libre ejercicio de nuestra profesión. Y aclarar, una vez" ,
       },
       {
-          id:6,
+          id:2,
           img:FinAño2025,
           titulo:"Mensaje de Fin de Año",
           fecha:"30 de diciembre de 2024",

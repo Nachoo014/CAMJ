@@ -15,14 +15,14 @@ function TramitesMatricula() {
           },
           {
             id: 3,
-            href: "/RequisitosparaMatrículaTransitoria",
+            href: "/RequisitosparaMatriculaTransitoria",
             link: "Requisitos para Matrícula Transitoria",
             
           },
           {
             id: 4,
-            href: "/RequisitosparaMatrículaTransitoria",
-            link: "Requisitos para Matrícula Transitoria",
+            href: "/Solicitudcertificadodematricula",
+            link: "Solicitud certificado de matrícula",
             
           },]
 
