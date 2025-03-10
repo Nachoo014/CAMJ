@@ -11,7 +11,7 @@ function AfiliarseCajaAbogados() {
       <h1 className="text-white text-3xl md:text-5xl font-bold">Afiliarse a la Caja de Abogados</h1>
     </div>
   </div>
-  <h1 className='text-[20px] font-bold m-[15px]'>(abogados con domicilio real en el departamento Marcos Juárez)</h1>
+  <h1 className='text-[20px] font-bold m-[15px]'>PARA AFILIARSE A LA CAJA DE ABOGADOS</h1>
   <p className='text-[14px] font-bold m-[15px]'>
   BAJAR y completar (con links internos en el documento).
         </p>
