@@ -12,7 +12,7 @@ function ReqMatriculaTransitoria() {
             <h1 className="text-white text-3xl md:text-5xl font-bold">Requisitos para Matrícula Transitoria</h1>
           </div>
         </div>
-        <h1 className='text-[20px] font-bold m-[15px]'>(para abogados/as con domicilio real fuera de la provincia de Córdoba)</h1>
+        <h1 className='text-[20px] font-bold m-[15px]'>para abogados/as con domicilio real fuera de la provincia de Córdoba</h1>
         <div className='my-[25px]'>
         <p className='text-[14px] font-bold m-[15px]'>1)Formulario de Solicitud de inscripción (abajo)</p>
         <p className='text-[14px] font-bold m-[15px]'>2)  1 fotografías 3×3</p>
