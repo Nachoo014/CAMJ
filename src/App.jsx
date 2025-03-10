@@ -10,6 +10,8 @@ import ScrollTop from './components/ScrollTop';
 import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
 import Enlaces from './pages/Enlaces';
+import Padron from './pages/Padron';
+import Jurisprudencia from './pages/Jurisprudencia';
 function App() {
 
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/" element={<Inicio />} />
           <Route path="/Directorio" element={<Directorio />} />
           <Route path="/Links" element={<Enlaces/>} />
+          <Route path="/Padron" element={<Padron/>} />
+          <Route path="/Jurisprudencia" element={<Jurisprudencia/>} />
           <Route path="/noticias" element={<Noticias />} />
           <Route path="/noticias/:id" element={<Noticia />} />
           <Route path="*" element={<NotFound />} />

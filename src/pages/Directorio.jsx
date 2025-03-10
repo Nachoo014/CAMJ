@@ -140,26 +140,48 @@ function Directorio() {
         </div>
         <div className='bg-[#0F0D3C] w-[100%] h-[100%] flex flex-col items-center'>
             <Link className='bg-white text-black my-[50px] font-semibold text-3xl md:text-4xl flex justify-center items-center rounded-[10px] h-[60px] p-[15px] transform scale-100 transition duration-500 hover:scale-110' >ESTATUTO</Link>
-            <img src={ImagenDirectorio} className='w-[80%] h-[200px] md:h-[400px] xl:h-[600px]  ' alt="" />
+            <motion.img 
+                initial={{ opacity: 0, y: -100 }} 
+                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}  src={ImagenDirectorio} className='w-[80%] h-[200px] md:h-[400px] xl:h-[600px]  ' alt="" />
             <div className='mt-[50px] w-[100%]'>
-                <h1 className='text-2xl md:text-4xl px-2 mb-[15px] bg-[#f4f4f4] w-[100%] text-center font-semibold '>DELEGACIÓN MARCOS JUÁREZ</h1>
+                <motion.h1 
+                initial={{ opacity: 0 }} 
+                whileInView={{ opacity: 1, transition: { duration: 0.4 } }} className='text-2xl md:text-4xl px-2 mb-[15px] bg-[#f4f4f4] w-[100%] text-center font-semibold '>DELEGACIÓN MARCOS JUÁREZ</motion.h1>
                 <div className=''>
                 {DirectivosMsJz.map((direc) =>(<div>
-                    <h1 className='text-[20px] md:text-[30px] text-[#f4f4f4] text-center underline m-[5px]'>{direc.puesto}</h1>
-                    <p className='text-[17px] md:text-[23px] text-[#f4f4f4] text-center m-[5px]'>{direc.nombreCompleto}</p>
+                    <motion.h1 
+                        initial={{ opacity: 0, y: -100 }} 
+                        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+                        className='text-[20px] md:text-[30px] text-[#f4f4f4] text-center underline m-[5px]'>{direc.puesto}</motion.h1>
+                    <motion.p 
+                    initial={{ opacity: 0, y: -100 }} 
+                    whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+                    className='text-[17px] md:text-[23px] text-[#f4f4f4] text-center m-[5px]'>{direc.nombreCompleto}</motion.p>
                     </div>
                 ))}
                     <div className='flex flex-col md:flex-row justify-around '>
                         <div className='text-center'>
-                            <h1 className='text-[20px] md:text-[23px] xl:text-[25px] text-[#f4f4f4] underline my-[15px]'>VOCALES TITULARES</h1>
+                            <motion.h1 
+                            initial={{ opacity: 0, y: -100 }} 
+                            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+                            className='text-[20px] md:text-[23px] xl:text-[25px] text-[#f4f4f4] underline my-[15px]'>VOCALES TITULARES</motion.h1>
                             {vocTitMsJz.map((vtmj)=>(
-                                <p className='text-[18px] md:text-[20px] xl:text-[23px] text-[#f4f4f4] my-[15px] '>{vtmj.nombreCompleto} </p>
+                                <motion.p
+                                initial={{ opacity: 0, y: -100 }} 
+                                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+                                className='text-[18px] md:text-[20px] xl:text-[23px] text-[#f4f4f4] my-[15px] '>{vtmj.nombreCompleto} </motion.p>
                             ))}
                         </div>
                         <div className='text-center'>
-                        <h1 className='text-[20px] md:text-[23px] xl:text-[25px] text-[#f4f4f4] underline my-[15px]'>VOCALES SUPLENTES</h1>
+                        <motion.h1
+                        initial={{ opacity: 0, y: -100 }} 
+                        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+                        className='text-[20px] md:text-[23px] xl:text-[25px] text-[#f4f4f4] underline my-[15px]'>VOCALES SUPLENTES</motion.h1>
                             {vocSupMsJz.map((vsmj)=>(
-                                <p className='text-[18px] md:text-[20px] xl:text-[23px] text-[#f4f4f4] my-[15px] '>{vsmj.nombreCompleto} </p>
+                                <motion.p 
+                                initial={{ opacity: 0, y: -100 }} 
+                                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+                                className='text-[18px] md:text-[20px] xl:text-[23px] text-[#f4f4f4] my-[15px] '>{vsmj.nombreCompleto} </motion.p>
                             ))}
                         </div>
 
@@ -167,24 +189,46 @@ function Directorio() {
                 </div>
             </div>
             <div className='mt-[50px] w-[100%]'>
-            <h1 className='text-2xl md:text-3xl xl:text-4xl px-2 mb-[15px] bg-[#f4f4f4] w-[100%] text-center font-semibold '>DELEGACIÓN CORRAL DE BUSTOS IFFLINGER</h1>
+            <motion.h1
+            initial={{ opacity: 0, }} 
+            whileInView={{ opacity: 1, transition: { duration: 0.4 } }}
+            className='text-2xl md:text-3xl xl:text-4xl px-2 mb-[15px] bg-[#f4f4f4] w-[100%] text-center font-semibold '>DELEGACIÓN CORRAL DE BUSTOS IFFLINGER</motion.h1>
             <div>
             {DirectivosCB.map((direcCB) =>(<div>
-                    <h1 className='text-[20px] md:text-[30px] text-[#f4f4f4] text-center underline m-[5px]'>{direcCB.puesto}</h1>
-                    <p className='text-[17px] md:text-[23px] text-[#f4f4f4] text-center m-[5px]'>{direcCB.nombreCompleto}</p>
+                    <motion.h1
+                        initial={{ opacity: 0, y: -100 }} 
+                        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+                        className='text-[20px] md:text-[30px] text-[#f4f4f4] text-center underline m-[5px]'>{direcCB.puesto}</motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: -100 }} 
+                        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+                        className='text-[17px] md:text-[23px] text-[#f4f4f4] text-center m-[5px]'>{direcCB.nombreCompleto}</motion.p>
                     </div>
                 ))}
                 <div className='flex flex-col md:flex-row justify-around text-center'>
                     <div className=''>
-                        <h1 className='text-[20px] md:text-[23px] xl:text-[25px] text-[#f4f4f4] underline my-[15px]'>VOCALES TITULARES</h1>
+                        <motion.h1
+                        initial={{ opacity: 0, y: -100 }} 
+                        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }} 
+                        className='text-[20px] md:text-[23px] xl:text-[25px] text-[#f4f4f4] underline my-[15px]'>VOCALES TITULARES</motion.h1>
                         {vocTitCB.map((vtcb)=>(
-                                <p className='text-[18px] md:text-[20px] xl:text-[23px] text-[#f4f4f4] my-[15px] '>{vtcb.nombreCompleto} </p>
+                                <motion.p
+                                initial={{ opacity: 0, y: -100 }} 
+                                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+                                className='text-[18px] md:text-[20px] xl:text-[23px] text-[#f4f4f4] my-[15px] '>{vtcb.nombreCompleto} </motion.p>
                             ))}
                     </div>
                     <div className=''>
-                    <div className=''><h1 className='text-[20px] md:text-[23px] xl:text-[25px] text-[#f4f4f4] underline my-[15px]'>VOCALES SUPLENTES</h1>
+                    <div className=''>
+                    <motion.h1
+                    initial={{ opacity: 0, y: -100 }} 
+                    whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+                    className='text-[20px] md:text-[23px] xl:text-[25px] text-[#f4f4f4] underline my-[15px]'>VOCALES SUPLENTES</motion.h1>
                     {vocSupCB.map((vscb)=>(
-                                <p className='text-[18px] md:text-[20px] xl:text-[23px] text-[#f4f4f4] my-[15px] '>{vscb.nombreCompleto} </p>
+                                <motion.p
+                                initial={{ opacity: 0, y: -100 }} 
+                                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+                                className='text-[18px] md:text-[20px] xl:text-[23px] text-[#f4f4f4] my-[15px] '>{vscb.nombreCompleto} </motion.p>
                             ))}
                     </div>
                     </div>

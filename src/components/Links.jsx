@@ -10,7 +10,7 @@ import * as motion from "motion/react-client"
 function Links() {
     const enlaces = [{
         id: 1,
-        href: "/Padrón",
+        href: "/Padron",
         link: "Padrón",
         icono: <CiViewList />,
       },

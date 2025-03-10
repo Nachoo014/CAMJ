@@ -31,8 +31,8 @@ function NavBar() {
   ];
   return (
     <div className="z-50 w-[100%] fixed top-0 max-w-[1440px] flex justify-between items-center text-black py-6 px-8 md:px-32 bg-[#ffe7d1] drop-shadow-md">
-      <h1 className="text-3xl font-bold">Logo</h1>
-
+      <a href='/' className="text-3xl font-bold">Logo</a>
+  
       {/* Menú Desktop */}
       <div className="hidden xl:flex items-center gap-12 font-semibold text-base">
         {links.map((l) => (
@@ -45,13 +45,13 @@ function NavBar() {
           </Link>
         ))}
       </div>
-
+  
       {/* Botón Menú Móvil */}
       <IoMdMenu
         className="xl:hidden block text-5xl cursor-pointer"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       />
-
+  
       {/* Menú Móvil */}
       <div
         className={`absolute top-24 left-0 w-full bg-[#ffe7d1] flex flex-col items-center gap-6 font-semibold text-lg transition-transform z-50 
@@ -62,6 +62,7 @@ function NavBar() {
             className="w-full text-center p-4 hover:bg-white transition-all cursor-pointer"
             key={l.id}
             to={l.href}
+            onClick={() => setIsMenuOpen(false)} // Cierra el menú al hacer clic
           >
             {l.link}
           </Link>

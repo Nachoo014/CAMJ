@@ -49,7 +49,10 @@ function Enlaces() {
         </div>
         <div className="my-[50px] flex flex-col justify-center items-center w-[100%] max-w-[1440px]  ">
         {enlaces.map((e) =>(
-            <motion.a key={e.id} href={e.href} className="w-[80%] xl:w-[50%] h- bg-[#0F0D3C] m-4 text-[20px] md:text-[25px] text-[#f4f4f4] text-center rounded-2xl drop-shadow-md transform scale-100 transition duration-500 hover:scale-105">{e.nombre}</motion.a>
+            <motion.a
+            initial={{ opacity: 0, x: -100 }} 
+            whileInView={{ opacity: 1, x: 0, transition: { duration: 0.4 } }} 
+            key={e.id} href={e.href} className="w-[80%] xl:w-[50%] h- bg-[#0F0D3C] m-4 text-[20px] md:text-[25px] text-[#f4f4f4] text-center rounded-2xl drop-shadow-md transform scale-100 transition duration-500 hover:scale-105">{e.nombre}</motion.a>
         ))}
         </div>
     </div>
