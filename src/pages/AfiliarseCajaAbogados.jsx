@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Inicio.css";
 
 function AfiliarseCajaAbogados() {
   return (

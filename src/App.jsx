@@ -16,8 +16,8 @@ import Requisitosparamatricularse from './pages/Requisitosparamatricularse';
 import AfiliarseCajaAbogados from './pages/AfiliarseCajaAbogados';
 import ReqMatriculaTransitoria from './pages/ReqMatriculaTransitoria';
 import Solicitudcertificadodematricula from './pages/Solicitudcertificadodematricula';
-
-
+import Convenio from './pages/Convenio';
+import ValorAportes from './pages/ValorAportes';
 
 
 
@@ -40,8 +40,10 @@ function App() {
           <Route path="/Links" element={<Enlaces/>} />
           <Route path="/Padron" element={<Padron/>} />
           <Route path="/Jurisprudencia" element={<Jurisprudencia/>} />
-          <Route path="/Requisitosparamatricularse" element={<Requisitosparamatricularse/>} />
+          <Route path="/ConveniosyBeneficios" element={<Convenio/>} />
+          <Route path="/ValorDelAporte" element={<ValorAportes/>} />
           <Route path="/RequisitosparaMatriculaTransitoria" element={<ReqMatriculaTransitoria/>} />
+          <Route path="/Requisitosparamatricularse" element={<Requisitosparamatricularse/>} />
           <Route path="/AfiliarsealaCajadeAbogados" element={<AfiliarseCajaAbogados/>} />
           <Route path="/Solicitudcertificadodematricula" element={<Solicitudcertificadodematricula/>} />
           <Route path="/noticias" element={<Noticias />} />

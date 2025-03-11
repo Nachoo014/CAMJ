@@ -26,7 +26,7 @@ function DelegacionCorral() {
                 <img src={nd.img} className='rounded-t-[5px]' alt="" />
                 <h1 className='text-2xl mt-[20px] font-bold text-[#f2f2f2]'>{nd.titulo} </h1>
                 <p className='text-sm px-[20px] m-20px font-semibold text-[#f2f2f2]' >{nd.resumen}</p>
-                <Link to={`/noticias/${nd.id}`} className="bg-[#f4f4f4] text-[#15171C] transform scale-100 transition duration-500 hover:scale-90 text- m-auto text-center w-[50%] rounded-[5px] ">Leer más</Link>
+                <Link to={`/DelefacionCorral/${nd.id}`} className="bg-[#f4f4f4] text-[#15171C] transform scale-100 transition duration-500 hover:scale-90 text- m-auto text-center w-[50%] rounded-[5px] ">Leer más</Link>
 
                 
             </motion.div>))}
