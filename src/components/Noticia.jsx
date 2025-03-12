@@ -60,20 +60,49 @@ function Noticia() {
       const noticia = noticias.find((n) => n.id === parseInt(id));
     
       if (!noticia) return <h1>Noticia no encontrada</h1>;
-  return (
-    <div className="mt-[90px] flex flex-col justify-center max-w-[1440px]">
-      <img src={noticia.img} className='m-1 md:m-[50px]' alt="" />
-      <h1 className='ml-1 md:ml-[50px] my-[15px] text-[20px] xl:text-[30px] font-bold underline'>{noticia.titulo}</h1>
-      <p className='ml-1 md:ml-[50px] my-[15px] text-[12px] xl:text-[15px]'>{noticia.fecha}</p>
-      {noticia.contenido.map((parrafo, index) => (
-    <p className='ml-1 md:ml-[50px] my-[15px] text-[18px] xl:text-[25px] mr-1 md:mr-[50px]' key={index}>{parrafo}</p>
-))}
-      {noticia.Saludo.map((saludo, index) => (
-    <p className='ml-1 md:ml-[50px] my-[15px] text-[18px] xl:text-[25px] text-center' key={index}>{saludo}</p>
-))}
+      return (
+        <div className="mt-[150px] flex flex-col justify-center max-w-[900px] mx-auto my-[150px] p-6 bg-white shadow-lg rounded-lg">
+          {/* Renderiza la imagen si existe */}
+          {noticia.img && <img src={noticia.img} className='m-1 md:m-[50px]' alt={noticia.titulo} />}
+          
+          <h1 className='ml-1 md:ml-[50px] my-[15px] text-[20px] xl:text-[30px] font-bold underline'>
+            {noticia.titulo}
+          </h1>
+          
+          <p className='ml-1 md:ml-[50px] my-[15px] text-[12px] xl:text-[15px]'>{noticia.fecha}</p>
+          
+          {/* Renderiza los párrafos del contenido */}
+          {noticia.contenido && noticia.contenido.map((parrafo, index) => (
+            <p className='ml-1 md:ml-[50px] my-[15px] text-[18px] xl:text-[25px] mr-1 md:mr-[50px]' key={index}>
+              {parrafo}
+            </p>
+          ))}
     
-    </div>
-  )
+          {/* Renderiza el saludo si existe */}
+          {noticia.Saludo && noticia.Saludo.map((saludo, index) => (
+            <p className='ml-1 md:ml-[50px] my-[15px] text-[18px] xl:text-[25px] text-center' key={index}>
+              {saludo}
+            </p>
+          ))}
+    
+          {/* Renderiza los botones de descarga si existen */}
+          {noticia.descargas && noticia.descargas.length > 0 && (
+            <div className="ml-1 md:ml-[50px] my-[15px]">
+              <h2 className="text-[18px] xl:text-[25px] font-bold">Descargas:</h2>
+              {noticia.descargas.map((archivo, index) => (
+                <a 
+                  key={index} 
+                  href={archivo.url} 
+                  className="block mt-2 p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700"
+                  download
+                >
+                  {archivo.nombre}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      );
 }
 
 export default Noticia

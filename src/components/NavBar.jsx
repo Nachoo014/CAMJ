@@ -3,6 +3,8 @@ import { useState } from 'react'
 import "./Style.css"
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { IoMdMenu } from 'react-icons/io';
+import Logo from "../assets/LogoCAMJ.png";
+
 
 function NavBar() {
 
@@ -23,15 +25,10 @@ function NavBar() {
       href: "/Links",
       link: "Links",
     },
-    {
-      id: 4,
-      href: "/Concurso",
-      link: "Concurso",
-    },
   ];
   return (
     <div className="z-50 w-[100%] fixed top-0 max-w-[1440px] flex justify-between items-center text-black py-6 px-8 md:px-32 bg-[#ffe7d1] drop-shadow-md">
-      <a href='/' className="text-3xl font-bold">Logo</a>
+      <a href="/"><img src={Logo} className='w-[80px] h-[80px]' alt="" /></a>
   
       {/* Menú Desktop */}
       <div className="hidden xl:flex items-center gap-12 font-semibold text-base">
