@@ -8,7 +8,6 @@ import CAMJCB_DIA_INHABIL from "../assets/CAMJFiscaliaDiaInhabil.png";
 
 
 
-
 function NoticiasCorrales() {
   const noticias = [
     {
@@ -23,8 +22,8 @@ function NoticiasCorrales() {
         "Para mayor información, los interesados podrían comunicarse al teléfono (0351) 4481014, internos 37041, 37046, 37052, en días hábiles, de 8 a 14 horas",
       ],
       descargas: [
-        { nombre: "03-Lic. Obra Corral de Bustos – Planos_compressed", url: "" },
-        { nombre: "04-Lic. Obra Corral de Bustos – Estudio de suelos", url: "" },
+        { nombre: "03-Lic. Obra Corral de Bustos – Planos_compressed", url: "/upload/03-Lic.-Obra-Corral-de-Bustos-Planos_compressed.pdf" },
+        { nombre: "04-Lic. Obra Corral de Bustos – Estudio de suelos", url: "/upload/04-Lic.-Obra-Corral-de-Bustos-Estudio-de-suelos.pdf" },
       ],
     },
     {
@@ -126,6 +125,7 @@ function NoticiasCorrales() {
               href={archivo.url}
               className="block mt-2 w-[80%] md:w-[65%] bg-[#23272F] text-white py-2 px-4 rounded-lg hover:bg-black transition"
               download
+              type="application/pdf"
             >
               {archivo.nombre}
             </a>
