@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "homepage": "colegioabogadosmj.com.ar",
   "dependencies": {
     "@tailwindcss/vite": "^4.0.9",
     "motion": "^12.4.7",

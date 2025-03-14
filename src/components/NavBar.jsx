@@ -27,7 +27,7 @@ function NavBar() {
     },
   ];
   return (
-    <div className="z-50 w-[100%] fixed top-0 max-w-[1440px] flex justify-between items-center text-black py-6 px-8 md:px-32 bg-[#ffe7d1] drop-shadow-md">
+    <div className="z-50 w-[100%] max-h-[90px] fixed top-0 max-w-[1440px] flex justify-between items-center text-black py-6 md:px-32 bg-[#ffe7d1] drop-shadow-md">
       <a href="/"><img src={Logo} className='w-[80px] h-[80px]' alt="" /></a>
   
       {/* Menú Desktop */}
