@@ -38,7 +38,7 @@ function Links() {
        
       }]
   return (
-    <div className='p-[50px] h-full w-full bg-[#ffe7d1] flex flex-col xl:flex-row justify-center items-center'>
+    <div className='p-[50px] h-full w-screen bg-[#ffe7d1] flex flex-col xl:flex-row justify-center items-center'>
   {enlaces.map((e) => (
     <Link
       className="w-[80%] m-5 relative h-full xl:h-[250px] border-4 rounded-md flex flex-col items-center justify-center text-center text-1xl md:text-2xl xl:text-3xl p-2 hover:bg-[#15171c] hover:text-[#ffe7d1] transform scale-100 transition duration-500 hover:scale-105"

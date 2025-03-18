@@ -11,7 +11,7 @@ function Footer() {
 
     const [date, setDate] = useState(new Date());
   return (
-    <div className='w-[100%] max-w-[1440px] h-[100%] bg-[#202020] px-[150px] py-[35px] flex flex-col xl:flex-row justify-between items-center'>
+    <div className='w-screen h-[100%] bg-[#202020] px-[150px] py-[35px] flex flex-col xl:flex-row justify-between items-center'>
         <div className='flex flex-col items-center'>
             <div className='border-2 border-[#f4f4f4] text-center w-[350px] flex flex-col items-center rounded-2xl p-[25px]'>
                 <h1 className='text-[#f4f4f4]'>Delegación Corral de Bustos</h1>

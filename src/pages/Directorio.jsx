@@ -129,7 +129,7 @@ function Directorio() {
       ]
     return (
         <>
-        <div className="relative w-[100%] h-[150px] mt-[90px] bg-[url('./assets/FondoTramiteMatricula.jpg')] bg-cover bg-center">
+        <div className="relative w-screen h-[150px] mt-[90px] bg-[url('./assets/FondoTramiteMatricula.jpg')] bg-cover bg-center">
           {/* Overlay negro */}
           <div className="absolute inset-0 bg-black opacity-70"></div>
       
@@ -138,7 +138,7 @@ function Directorio() {
             <h1 className="text-white text-3xl md:text-5xl font-bold">Directorio 2023/25</h1>
           </div>
         </div>
-        <div className='bg-[#0F0D3C] w-[100%] h-[100%] flex flex-col items-center'>
+        <div className='bg-[#0F0D3C] w-screen h-[100%] flex flex-col items-center'>
             <Link className='bg-white text-black my-[50px] font-semibold text-3xl md:text-4xl flex justify-center items-center rounded-[10px] h-[60px] p-[15px] transform scale-100 transition duration-500 hover:scale-110' >ESTATUTO</Link>
             <motion.img 
                 initial={{ opacity: 0, y: -100 }} 

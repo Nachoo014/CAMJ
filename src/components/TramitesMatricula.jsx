@@ -27,7 +27,7 @@ function TramitesMatricula() {
           },]
 
   return (
-    <div className="relative h-[700px] w-full max-w-[1440px]">
+    <div className="relative h-[700px] w-screen">
     {/* Imagen de fondo */}
     <div className="bg-[url('./assets/FondoTramiteMatricula.jpg')] bg-cover h-full"></div>
     

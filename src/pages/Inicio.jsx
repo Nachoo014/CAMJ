@@ -7,7 +7,7 @@ import DelegacionCorral from "../components/DelegacionCorral";
 function Inicio() {
   return (
     <>
-      <div className="relative h-screen w-full max-w-[1440px]">
+      <div className="relative h-screen w-screen">
         {/* Imagen de fondo */}
         <div className="absolute inset-0 bg-[url('./assets/FondoInicio.jpg')] bg-cover bg-center bg-no-repeat pointer-events-none"></div>
 

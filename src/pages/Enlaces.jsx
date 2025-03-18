@@ -37,7 +37,7 @@ const enlaces = [
 
 function Enlaces() {
   return (
-    <div className="mt-[90px] w-[100%] max-w-[1440px] bg-#[f4f4f4] flex flex-col justify-center items-center">
+    <div className="mt-[90px] w-screen bg-#[f4f4f4] flex flex-col justify-center items-center">
         <div className="relative w-[100%] h-[150px] bg-[url('./assets/FondoTramiteMatricula.jpg')] bg-cover bg-center">
           {/* Overlay negro */}
           <div className="absolute inset-0 bg-black opacity-70"></div>
@@ -47,7 +47,7 @@ function Enlaces() {
             <h1 className="text-white text-3xl md:text-5xl font-bold">Links</h1>
           </div>
         </div>
-        <div className="my-[50px] flex flex-col justify-center items-center w-[100%] max-w-[1440px]  ">
+        <div className="my-[50px] flex flex-col justify-center items-center w-screen">
         {enlaces.map((e) =>(
             <motion.a
             initial={{ opacity: 0, x: -100 }} 
