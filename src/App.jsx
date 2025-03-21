@@ -20,6 +20,7 @@ import Convenio from './pages/Convenio';
 import ValorAportes from './pages/ValorAportes';
 import NoticiasCorrales from './components/NoticiasCorrales';
 import JuzgadosyJuecesdePaz from './pages/JuzgadosyJuecesdePaz';
+import TramitesMatricula from './components/TramitesMatricula';
 
 
 
@@ -42,6 +43,7 @@ function App() {
           <Route path="/ConveniosyBeneficios" element={<Convenio/>} />
           <Route path="/ValorDelAporte" element={<ValorAportes/>} />
           <Route path="/JuzgadosyJuecesdePaz" element={<JuzgadosyJuecesdePaz/>} />
+          <Route path="//RequisitosMatriculacion" element={<TramitesMatricula/>} />
           <Route path="/RequisitosparaMatriculaTransitoria" element={<ReqMatriculaTransitoria/>} />
           <Route path="/Requisitosparamatricularse" element={<Requisitosparamatricularse/>} />
           <Route path="/AfiliarsealaCajadeAbogados" element={<AfiliarseCajaAbogados/>} />
