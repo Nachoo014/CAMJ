@@ -8,7 +8,11 @@ import Logo from "../assets/LogoCAMJ.png";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const [openSubMenu, setOpenSubMenu] = useState(null);
+
+  const toggleSubMenu = (menu) => {
+    setOpenSubMenu(openSubMenu === menu ? null : menu);
+  };
 
   const links = [
     {
@@ -24,8 +28,12 @@ function NavBar() {
     },
     {
       id: 2,
-      href: "/Servicios",
+      href: "#",
       link: "Servicios",
+      subMenu: [
+        { id: 1, href: "/Convenios", link: "Convenios y Beneficios" },
+        { id: 2, href: "/Herramientas", link: "Herramientas Online" },
+      ],
     },
     {
       id: 3,
@@ -53,18 +61,18 @@ function NavBar() {
               <div>
                 <button
                   className="p-3 hover:bg-[#15171c] hover:text-[#ffe7d1] rounded-md transition-all"
-                  onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                  onClick={() => toggleSubMenu(l.link)}
                 >
                   {l.link}
                 </button>
-                {isSubMenuOpen && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md">
+                {openSubMenu === l.link && (
+                  <div className="absolute left-0 mt-2 w-48 bg-[#ffe7d1] shadow-lg rounded-md">
                     {l.subMenu.map((sub) => (
                       <Link
                         key={sub.id}
                         to={sub.href}
-                        className="block px-4 py-2 text-black hover:bg-[#ffe7d1] transition-all"
-                        onClick={() => setIsSubMenuOpen(false)} // Cierra el submenú al hacer clic
+                        className="block px-4 py-2 text-black hover:bg-white transition-all"
+                        onClick={() => setOpenSubMenu(null)}
                       >
                         {sub.link}
                       </Link>
@@ -101,11 +109,11 @@ function NavBar() {
               <div>
                 <button
                   className="w-full p-4 hover:bg-white transition-all cursor-pointer"
-                  onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                  onClick={() => toggleSubMenu(l.link)}
                 >
                   {l.link}
                 </button>
-                {isSubMenuOpen && (
+                {openSubMenu === l.link && (
                   <div className="bg-[#ffe7d1] shadow-md">
                     {l.subMenu.map((sub) => (
                       <Link
@@ -113,7 +121,7 @@ function NavBar() {
                         to={sub.href}
                         className="block px-4 py-2 hover:bg-white transition-all"
                         onClick={() => {
-                          setIsSubMenuOpen(false);
+                          setOpenSubMenu(null);
                           setIsMenuOpen(false);
                         }}
                       >
