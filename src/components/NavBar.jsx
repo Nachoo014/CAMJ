@@ -31,7 +31,7 @@ function NavBar() {
       href: "#",
       link: "Servicios",
       subMenu: [
-        { id: 1, href: "/Convenios", link: "Convenios y Beneficios" },
+        { id: 1, href: "/ConveniosyBeneficios", link: "Convenios y Beneficios" },
         { id: 2, href: "/Herramientas", link: "Herramientas Online" },
       ],
     },
