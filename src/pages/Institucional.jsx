@@ -135,7 +135,7 @@ function Directorio() {
       
           {/* Texto centrado */}
           <div className="absolute inset-0 flex items-center text-center justify-center">
-            <h1 className="text-white text-3xl md:text-5xl font-bold">Directorio 2023/25</h1>
+            <h1 className="text-white text-3xl md:text-5xl font-bold underline">Institucional</h1>
           </div>
         </div>
         <div className='bg-[#0F0D3C] w-screen h-[100%] flex flex-col items-center'>

@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Noticia from './components/Noticia';
 import Noticias from './components/Noticias';
-import Directorio from './pages/Directorio';
+import Institucional from './pages/Institucional';
 import Inicio from './pages/Inicio';
 import './App.css'
 import NavBar from './components/NavBar';
@@ -35,7 +35,7 @@ function App() {
         <NavBar></NavBar>
         <Routes>
           <Route path="/" element={<Inicio />} />
-          <Route path="/Directorio" element={<Directorio />} />
+          <Route path="/Institucional" element={<Institucional />} />
           <Route path="/Links" element={<Enlaces/>} />
           <Route path="/Padron" element={<Padron/>} />
           <Route path="/Jurisprudencia" element={<Jurisprudencia/>} />

@@ -24,11 +24,11 @@ function DelegacionCorral() {
       ];
   
     return (
-    <div className='flex flex-col w-screen justify-center items-center'>
+    <div className='flex flex-col w-screen justify-center items-center mt-[30px]'>
         <motion.h1
          initial={{ opacity: 0, x: -100 }} 
          whileInView={{ opacity: 1, x: 0, transition: { duration: 0.4 } }}
-        className='w-screen p-[25px] flex justify-center items-center text-center text-3xl md:text-4xl xl:text-5xl font-bold'>Delegación Corral de Bustos Ifflinger</motion.h1>
+        className='w-[80%] p-[25px] border-t-1 border-t-gray-500 flex justify-center items-center text-center text-[25px] md:text-[30px] font-bold'>Noticias</motion.h1>
         <div className='flex flex-col w-full xl:flex-row justify-between items-center px-[100px] '>
             {noticiasDelegacion.map((nd)=>(
             <motion.div
