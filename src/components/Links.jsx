@@ -10,34 +10,29 @@ import * as motion from "motion/react-client"
 import { FaHandsHoldingChild } from "react-icons/fa6";
 
 function Links() {
-    const enlaces = [{
-        id: 1,
-        href: "/Padron",
-        link: "Padrón",
-        icono: <CiViewList />,
-      },
+    const enlaces = [
       {
-        id: 2,
+        id: 1,
         href: "/ValorDelAporte",
         link: "Valor Del Aporte",
         icono: <IoLogoUsd />,
         
       },
       {
-        id: 3,
+        id: 2,
         href: "/JuzgadosyJuecesdePaz",
         link: "Juzgados y Jueces de Paz",
         icono: <BiSolidInstitution />,
         
       },
       {
-        id: 4,
+        id: 3,
         href: "/RequisitosMatriculacion",
         link: "Requisitos de matriculación",
         icono: <FaRegIdCard />,
       },
       {
-        id: 5,
+        id: 4,
         href: "/JRegistrodeabogadosdeniñosniñasyadolescentes",
         link: "Registro de abogados de niños, niñas y adolescentes",
         icono: <FaHandsHoldingChild />,
