@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ValorAportes() {
+function Valores() {
 
     const valores =[
         {
@@ -51,4 +51,4 @@ function ValorAportes() {
   )
 }
 
-export default ValorAportes
+export default Valores

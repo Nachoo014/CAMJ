@@ -28,7 +28,7 @@ function Inicio() {
             whileInView={{ opacity: 1, x: 0, transition: { duration: 0.8 } }}
             className="text-1xl md:text-2xl font-light"
           >
-            Tradición, ética y justicia: 64 años al servicio de los abogados.
+             Tradición, ética y justicia al servicio de los abogados.
           </motion.p>
         </div>
       </div>

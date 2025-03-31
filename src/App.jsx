@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Noticia from './components/Noticia';
 import Noticias from './components/Noticias';
-import Institucional from './pages/Institucional';
+import Autoridades from './pages/Autoridades';
 import Inicio from './pages/Inicio';
 import './App.css'
 import NavBar from './components/NavBar';
@@ -17,11 +17,11 @@ import AfiliarseCajaAbogados from './pages/AfiliarseCajaAbogados';
 import ReqMatriculaTransitoria from './pages/ReqMatriculaTransitoria';
 import Solicitudcertificadodematricula from './pages/Solicitudcertificadodematricula';
 import Convenio from './pages/Convenio';
-import ValorAportes from './pages/ValorAportes';
+import Valores from './pages/Valores';
 import NoticiasCorrales from './components/NoticiasCorrales';
 import JuzgadosyJuecesdePaz from './pages/JuzgadosyJuecesdePaz';
 import TramitesMatricula from './components/TramitesMatricula';
-
+import HerramientasOnline from './pages/HerramientasOnline';
 
 
 
@@ -36,14 +36,15 @@ function App() {
         <NavBar></NavBar>
         <Routes>
           <Route path="/" element={<Inicio />} />
-          <Route path="/Institucional" element={<Institucional />} />
-          <Route path="/Links" element={<Enlaces/>} />
+          <Route path="/Autoridades" element={<Autoridades />} />
+          <Route path="/SitiosdeInteres" element={<Enlaces/>} />
           <Route path="/Padron" element={<Padron/>} />
+          <Route path="/Herramientas" element={<HerramientasOnline/>} />
           <Route path="/Jurisprudencia" element={<Jurisprudencia/>} />
           <Route path="/ConveniosyBeneficios" element={<Convenio/>} />
-          <Route path="/ValorDelAporte" element={<ValorAportes/>} />
+          <Route path="/Valores" element={<Valores/>} />
           <Route path="/JuzgadosyJuecesdePaz" element={<JuzgadosyJuecesdePaz/>} />
-          <Route path="//RequisitosMatriculacion" element={<TramitesMatricula/>} />
+          <Route path="/RequisitosMatriculacion" element={<TramitesMatricula/>} />
           <Route path="/RequisitosparaMatriculaTransitoria" element={<ReqMatriculaTransitoria/>} />
           <Route path="/Requisitosparamatricularse" element={<Requisitosparamatricularse/>} />
           <Route path="/AfiliarsealaCajadeAbogados" element={<AfiliarseCajaAbogados/>} />

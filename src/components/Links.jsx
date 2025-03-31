@@ -13,26 +13,19 @@ function Links() {
     const enlaces = [
       {
         id: 1,
-        href: "/ValorDelAporte",
-        link: "Valor Del Aporte",
+        href: "/Valores",
+        link: "Valores",
         icono: <IoLogoUsd />,
         
       },
       {
         id: 2,
-        href: "/JuzgadosyJuecesdePaz",
-        link: "Juzgados y Jueces de Paz",
-        icono: <BiSolidInstitution />,
-        
-      },
-      {
-        id: 3,
         href: "/RequisitosMatriculacion",
         link: "Requisitos de matriculación",
         icono: <FaRegIdCard />,
       },
       {
-        id: 4,
+        id: 3,
         href: "/JRegistrodeabogadosdeniñosniñasyadolescentes",
         link: "Registro de abogados de niños, niñas y adolescentes",
         icono: <FaHandsHoldingChild />,

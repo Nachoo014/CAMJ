@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route,Link } from "react-router-dom";
 import ImagenDirectorio from '../assets/Directorio.jpg'
 
 
-function Directorio() {
+function Autoridades() {
 
     const DirectivosMsJz = [{
         id: 1,
@@ -139,7 +139,6 @@ function Directorio() {
           </div>
         </div>
         <div className='bg-[#0F0D3C] w-screen h-[100%] flex flex-col items-center'>
-            <Link className='bg-white text-black my-[50px] font-semibold text-3xl md:text-4xl flex justify-center items-center rounded-[10px] h-[60px] p-[15px] transform scale-100 transition duration-500 hover:scale-110' >ESTATUTO</Link>
             <motion.img 
                 initial={{ opacity: 0, y: -100 }} 
                 whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}  src={ImagenDirectorio} className='w-[80%] h-[200px] md:h-[400px] xl:h-[600px]  ' alt="" />
@@ -240,6 +239,6 @@ function Directorio() {
       );
 }
 
-export default Directorio
+export default Autoridades
 
 
