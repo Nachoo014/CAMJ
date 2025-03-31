@@ -22,7 +22,7 @@ import NoticiasCorrales from './components/NoticiasCorrales';
 import JuzgadosyJuecesdePaz from './pages/JuzgadosyJuecesdePaz';
 import TramitesMatricula from './components/TramitesMatricula';
 import HerramientasOnline from './pages/HerramientasOnline';
-
+import ComisionJovenes from './pages/ComisionJovenes';
 
 
 
@@ -39,6 +39,7 @@ function App() {
           <Route path="/Autoridades" element={<Autoridades />} />
           <Route path="/SitiosdeInteres" element={<Enlaces/>} />
           <Route path="/Padron" element={<Padron/>} />
+          <Route path="/ComisiondeJovenes" element={<ComisionJovenes/>} />
           <Route path="/Herramientas" element={<HerramientasOnline/>} />
           <Route path="/Jurisprudencia" element={<Jurisprudencia/>} />
           <Route path="/ConveniosyBeneficios" element={<Convenio/>} />

@@ -139,9 +139,6 @@ function Autoridades() {
           </div>
         </div>
         <div className='bg-[#0F0D3C] w-screen h-[100%] flex flex-col items-center'>
-            <motion.img 
-                initial={{ opacity: 0, y: -100 }} 
-                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}  src={ImagenDirectorio} className='w-[80%] h-[200px] md:h-[400px] xl:h-[600px]  ' alt="" />
             <div className='mt-[50px] w-[100%]'>
                 <motion.h1 
                 initial={{ opacity: 0 }} 
