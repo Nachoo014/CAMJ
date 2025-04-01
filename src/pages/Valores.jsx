@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { motion } from 'motion/react'
 function Valores() {
 
     const valores =[
@@ -7,19 +7,19 @@ function Valores() {
             id:1,
             titulo:"Valor del JUS",
             fechaAct:"Desde el 01/01/2025",
-            valor:"$31.776,42"
+            valor:"$32.348,40"
         },
         {
             id:2,
             titulo:"Unidad Económica",
             fechaAct:"Desde el 01/12/2024",
-            valor:"$7.815.242,99"
+            valor:"$8.525.859,38"
         },
         {
             id:3,
             titulo:"Aporte colegial",
             fechaAct:"Desde el 15/12/2024",
-            valor:"$18.000,00"
+            valor:"$20.500,00"
         },
     ]
 
@@ -37,13 +37,16 @@ function Valores() {
         <div className='flex flex-col justify-center my-[25px] items-center'>
             <h1 className=' text-black text-[25px] font-bold'>VALORES OFICIALES</h1>
             {valores.map(v => (
-                <div key={v.id} className='my-5 p-2.5 w-[250px] md:w-[500px] hover:bg-[#0f0d3c] hover:text-white transition duration-300 border-[#0F0D3C] border-2 '>
+                <motion.div
+                initial={{ opacity: 0, }} 
+                whileInView={{ opacity: 1, transition: { duration: 0.4 } }}
+                key={v.id} className='my-5 p-2.5 w-[250px] md:w-[500px] hover:bg-[#0f0d3c] hover:text-white transition duration-300 border-[#0F0D3C] border-2 '>
                     <p className='text-18px xl:text-20px font-bold'>{v.titulo}</p>
                     <p className='text-18px xl:text-20px font-light'>{v.fechaAct}</p>
                     <p className='text-18px xl:text-20px'>{v.valor}</p>
                     
 
-                </div>
+                </motion.div>
             ) )}
 
         </div>

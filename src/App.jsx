@@ -23,6 +23,8 @@ import JuzgadosyJuecesdePaz from './pages/JuzgadosyJuecesdePaz';
 import TramitesMatricula from './components/TramitesMatricula';
 import HerramientasOnline from './pages/HerramientasOnline';
 import ComisionJovenes from './pages/ComisionJovenes';
+import AbodagoDeNiño from './pages/AbodagoDeNiño';
+import ConvenioCasilleroNotificaciones from './pages/ConvenioCasilleroNotificaciones';
 
 
 
@@ -40,11 +42,13 @@ function App() {
           <Route path="/SitiosdeInteres" element={<Enlaces/>} />
           <Route path="/Padron" element={<Padron/>} />
           <Route path="/ComisiondeJovenes" element={<ComisionJovenes/>} />
+          <Route path="/Conveniocasillerosnotificaciones" element={<ConvenioCasilleroNotificaciones/>} />
           <Route path="/Herramientas" element={<HerramientasOnline/>} />
           <Route path="/Jurisprudencia" element={<Jurisprudencia/>} />
           <Route path="/ConveniosyBeneficios" element={<Convenio/>} />
           <Route path="/Valores" element={<Valores/>} />
           <Route path="/JuzgadosyJuecesdePaz" element={<JuzgadosyJuecesdePaz/>} />
+          <Route path="/Registrodeabogadosdeniñosniñasyadolescentes" element={<AbodagoDeNiño/>} />
           <Route path="/RequisitosMatriculacion" element={<TramitesMatricula/>} />
           <Route path="/RequisitosparaMatriculaTransitoria" element={<ReqMatriculaTransitoria/>} />
           <Route path="/Requisitosparamatricularse" element={<Requisitosparamatricularse/>} />

@@ -16,43 +16,43 @@ function ComisionJovenes() {
       </div>
       <div className="bg-[#0F0D3C] w-screen h-[100%] py-10 flex flex-col items-center">
         <motion.h1
-          initial={{ opacity: 0, y: -100 }}
-          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+          initial={{ opacity: 0, }} 
+          whileInView={{ opacity: 1, transition: { duration: 0.4 } }}
           className="text-[20px] md:text-[30px] text-[#f4f4f4] text-center underline m-[5px]"
         >
           Presidente
         </motion.h1>
         <motion.p
-          initial={{ opacity: 0, y: -100 }}
-          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+          initial={{ opacity: 0, }} 
+          whileInView={{ opacity: 1, transition: { duration: 0.4 } }}
           className="text-[17px] md:text-[23px] text-[#f4f4f4] text-center m-[5px]"
         >
           Marianela Bargna
         </motion.p>
         <motion.h1
-          initial={{ opacity: 0, y: -100 }}
-          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+          initial={{ opacity: 0, }} 
+          whileInView={{ opacity: 1, transition: { duration: 0.4 } }}
           className="text-[20px] md:text-[30px] text-[#f4f4f4] text-center underline m-[5px]"
         >
           Vicepresidente
         </motion.h1>
         <motion.p
-          initial={{ opacity: 0, y: -100 }}
-          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+          initial={{ opacity: 0, }} 
+          whileInView={{ opacity: 1, transition: { duration: 0.4 } }}
           className="text-[17px] md:text-[23px] text-[#f4f4f4] text-center m-[5px]"
         >
           Andreina Gomez
         </motion.p>
         <motion.h1
-          initial={{ opacity: 0, y: -100 }}
-          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+          initial={{ opacity: 0, }} 
+          whileInView={{ opacity: 1, transition: { duration: 0.4 } }}
           className="text-[20px] md:text-[30px] text-[#f4f4f4] text-center underline m-[5px]"
         >
           Secretaría
         </motion.h1>
         <motion.p
-          initial={{ opacity: 0, y: -100 }}
-          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.4 } }}
+          initial={{ opacity: 0, }} 
+          whileInView={{ opacity: 1, transition: { duration: 0.4 } }}
           className="text-[17px] md:text-[23px] text-[#f4f4f4] text-center m-[5px]"
         >
           Magalí Modiloni

@@ -26,7 +26,7 @@ function Links() {
       },
       {
         id: 3,
-        href: "/JRegistrodeabogadosdeniñosniñasyadolescentes",
+        href: "/Registrodeabogadosdeniñosniñasyadolescentes",
         link: "Registro de abogados de niños, niñas y adolescentes",
         icono: <FaHandsHoldingChild />,
         
