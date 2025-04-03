@@ -3558,16 +3558,16 @@ function Padron() {
           <div className="relative w-[100%] h-[150px] mt-[90px] bg-[url('./assets/FondoTramiteMatricula.jpg')] bg-cover bg-center">
             {/* Overlay negro */}
             <div className="absolute inset-0 bg-black opacity-70"></div>
-    
+      
             {/* Texto centrado */}
             <div className="absolute inset-0 flex items-center text-center justify-center">
               <h1 className="text-white text-3xl md:text-5xl font-bold">Padrón</h1>
             </div>
           </div>
-    
+      
           <div className="p-6">
             <h2 className="text-2xl font-bold mb-4">Búsqueda de Abogados</h2>
-            <p className='text-md mb-4'>Encuentra a tu abogado ingresando su apellido o número de matrícula.</p>
+            <p className="text-md mb-4">Encuentra a tu abogado ingresando su apellido o número de matrícula.</p>
             <input
               type="text"
               placeholder="Buscar por apellido o matrícula..."
@@ -3575,10 +3575,20 @@ function Padron() {
               value={busqueda}
               onChange={(e) => setBusqueda(e.target.value)}
             />
-    
+      
+            {/* Botón de descarga */}
+            
+            <a
+              href="/upload/PadronCAMJ.csv"
+              download
+              className="bg-[#0F0D3C] text-[#f4f4f4] px-5 py-2 text-lg font-semibold transition-transform duration-300 transform hover:scale-110 block text-center w-fit mx-auto"
+            >
+              Descargar Padrón
+            </a>
+      
             {/* Mostrar la tabla solo si hay una búsqueda válida */}
             {busquedaLimpia.length > 0 && datosFiltrados.length > 0 ? (
-              <div className="overflow-x-auto">
+              <div className="overflow-x-auto mt-4">
                 <table className="w-full border-collapse border border-gray-300">
                   <thead>
                     <tr className="bg-gray-200">
@@ -3613,11 +3623,12 @@ function Padron() {
                 </table>
               </div>
             ) : busquedaLimpia.length > 0 ? (
-              <p className="text-center text-gray-600">No se encontraron resultados</p>
+              <p className="text-center text-gray-600 mt-4">No se encontraron resultados</p>
             ) : null}
           </div>
         </div>
       );
+      
     }
     
     export default Padron;

@@ -21,8 +21,9 @@ function NavBar() {
       link: "Institucional",
       subMenu: [
         { id: 1, href: "/Autoridades", link: "Autoridades" },
-        { id: 2, href: "/ComisiondeJovenes", link: "Comisión de Jóvenes" },
-        { id: 3, href: "/Delegacion", link: "Delegación" },
+        { id: 2, href: "/Delegacion", link: "Delegación" },
+        { id: 3, href: "/ComisiondeJovenes", link: "Comisión de Jóvenes" },
+        
       ],
     },
     {

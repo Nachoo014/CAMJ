@@ -145,9 +145,6 @@ function Autoridades() {
                 whileInView={{ opacity: 1, transition: { duration: 0.4 } }}  src={ImagenDirectorio} className='w-[80%] mt-5 h-[200px] md:h-[400px] xl:h-[600px] rounded-md  ' alt="" />
 
             <div className='mt-[50px] w-[100%]'>
-                <motion.h1 
-                initial={{ opacity: 0, }} 
-                whileInView={{ opacity: 1, transition: { duration: 0.4 } }} className='text-2xl md:text-4xl px-2 mb-[15px] bg-[#f4f4f4] w-[100%] text-center font-semibold '>DELEGACIÓN MARCOS JUÁREZ</motion.h1>
                 <div className=''>
                 {DirectivosMsJz.map((direc) =>(<div>
                     <motion.h1 
@@ -189,53 +186,7 @@ function Autoridades() {
                     </div>
                 </div>
             </div>
-            <div className='mt-[50px] w-[100%]'>
-            <motion.h1
-            initial={{ opacity: 0, }} 
-            whileInView={{ opacity: 1, transition: { duration: 0.4 } }}
-            className='text-2xl md:text-3xl xl:text-4xl px-2 mb-[15px] bg-[#f4f4f4] w-[100%] text-center font-semibold '>DELEGACIÓN CORRAL DE BUSTOS IFFLINGER</motion.h1>
-            <div>
-            {DirectivosCB.map((direcCB) =>(<div>
-                    <motion.h1
-                       initial={{ opacity: 0, }} 
-                       whileInView={{ opacity: 1, transition: { duration: 0.4 } }}
-                        className='text-[20px] md:text-[30px] text-[#f4f4f4] text-center underline m-[5px]'>{direcCB.puesto}</motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0, }} 
-                        whileInView={{ opacity: 1, transition: { duration: 0.4 } }}
-                        className='text-[17px] md:text-[23px] text-[#f4f4f4] text-center m-[5px]'>{direcCB.nombreCompleto}</motion.p>
-                    </div>
-                ))}
-                <div className='flex flex-col md:flex-row justify-around text-center'>
-                    <div className=''>
-                        <motion.h1
-                        initial={{ opacity: 0, }} 
-                        whileInView={{ opacity: 1, transition: { duration: 0.4 } }}
-                        className='text-[20px] md:text-[23px] xl:text-[25px] text-[#f4f4f4] underline my-[15px]'>VOCALES TITULARES</motion.h1>
-                        {vocTitCB.map((vtcb)=>(
-                                <motion.p
-                                initial={{ opacity: 0, }} 
-                whileInView={{ opacity: 1, transition: { duration: 0.4 } }}
-                                className='text-[18px] md:text-[20px] xl:text-[23px] text-[#f4f4f4] my-[15px] '>{vtcb.nombreCompleto} </motion.p>
-                            ))}
-                    </div>
-                    <div className=''>
-                    <div className=''>
-                    <motion.h1
-                    initial={{ opacity: 0, }} 
-                    whileInView={{ opacity: 1, transition: { duration: 0.4 } }}
-                    className='text-[20px] md:text-[23px] xl:text-[25px] text-[#f4f4f4] underline my-[15px]'>VOCALES SUPLENTES</motion.h1>
-                    {vocSupCB.map((vscb)=>(
-                                <motion.p
-                                initial={{ opacity: 0, }} 
-                whileInView={{ opacity: 1, transition: { duration: 0.4 } }}
-                                className='text-[18px] md:text-[20px] xl:text-[23px] text-[#f4f4f4] my-[15px] '>{vscb.nombreCompleto} </motion.p>
-                            ))}
-                    </div>
-                    </div>
-                </div>
-            </div>
-            </div>
+
         </div>
         </>
       );

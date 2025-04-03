@@ -6,19 +6,19 @@ function Valores() {
         {
             id:1,
             titulo:"Valor del JUS",
-            fechaAct:"Desde el 01/01/2025",
+            fechaAct:"Desde el 01/04/2025",
             valor:"$32.348,40"
         },
         {
             id:2,
             titulo:"Unidad Económica",
-            fechaAct:"Desde el 01/12/2024",
+            fechaAct:"Desde el 01/04/2025",
             valor:"$8.525.859,38"
         },
         {
             id:3,
             titulo:"Aporte colegial",
-            fechaAct:"Desde el 15/12/2024",
+            fechaAct:"Desde el 01/04/2025",
             valor:"$20.500,00"
         },
     ]

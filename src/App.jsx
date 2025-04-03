@@ -25,6 +25,7 @@ import HerramientasOnline from './pages/HerramientasOnline';
 import ComisionJovenes from './pages/ComisionJovenes';
 import AbodagoDeNiño from './pages/AbodagoDeNiño';
 import ConvenioCasilleroNotificaciones from './pages/ConvenioCasilleroNotificaciones';
+import Delegacion from './pages/Delegacion';
 
 
 
@@ -42,6 +43,7 @@ function App() {
           <Route path="/SitiosdeInteres" element={<Enlaces/>} />
           <Route path="/Padron" element={<Padron/>} />
           <Route path="/ComisiondeJovenes" element={<ComisionJovenes/>} />
+          <Route path="/Delegacion" element={<Delegacion/>} />
           <Route path="/Conveniocasillerosnotificaciones" element={<ConvenioCasilleroNotificaciones/>} />
           <Route path="/Herramientas" element={<HerramientasOnline/>} />
           <Route path="/Jurisprudencia" element={<Jurisprudencia/>} />
