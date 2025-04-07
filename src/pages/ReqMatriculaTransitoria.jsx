@@ -17,7 +17,7 @@ function ReqMatriculaTransitoria() {
         <div className='my-[25px]'>
         <p className='text-[14px] font-bold m-[15px]'>1)Formulario de Solicitud de inscripción (abajo)</p>
         <p className='text-[14px] font-bold m-[15px]'>2)  1 fotografías 3×3</p>
-        <p className='text-[14px] font-bold m-[15px]'>3)  1 fotocopias del título autenticadas por Universidad  impreso a color y/o título emitido por  la Universidad con firma digital, en este caso enviar por correo electrónico en archivo PDF</p>
+        <p className='text-[14px] font-bold m-[15px]'>3) 1 fotocopias del título autenticadas por Universidad impreso a color y/o título emitido por la Universidad con firma digital, en este caso enviar por correo electrónico en archivo PDF (enviando en copia a color el mismo)</p>
         <p className='text-[14px] font-bold m-[15px]'>4) 1 fotocopia del  Documento de Identidad  con domicilio actual.</p>
         <p className='text-[14px] font-bold m-[15px]'>5) Certificado de buena conducta expedido por Policía de la Provincia de Córdoba Impreso a color cuya antigüedad no supere los tres meses</p>
         <p className='text-[14px] font-bold m-[15px]'>6)  Certificado del Registro Nacional de Reincidencia cuya antigüedad no supere los tres meses. Enviar por correo electrónico en archivo PDF </p>
@@ -26,13 +26,12 @@ function ReqMatriculaTransitoria() {
         <p className='text-[14px] font-bold m-[15px]'>9)  Constancia de CUIT o CUIL</p>
         <p className='text-[14px] font-bold m-[15px]'>10) Pago inscripción matrícula profesional:
 
-            <p className='mt-[5px]'>Si tiene menos de diez años de antigüedad en el título deberá pagar  seis aportes en concepto de gastos para gestión inscripción en la matrícula.</p>
+            <p className='mt-[5px]'>Gasto de gestión:</p>
 
-            <p className='mt-[5px]'>Si tiene más de diez años de antigüedad en el título debe pagar  diez aportes</p>
+            <p className='mt-[5px]'>el valor equivalente a 10 aportes colegiales.
+            El gasto de gestión no se abona con reinscripción en la matrícula oportunamente otorgada.</p>
 
-            <p className='mt-[5px]'>Además de los gastos de gestión detallados anteriormente tiene el siguiente</p>
-
-            <p className='mt-[5px]'>Costo de inscripción:</p>
+            <p className='mt-[5px] underline'>Además del gasto de gestión detallado anteriormente tiene el siguiente Costo de inscripción:</p>
 
             <p className='mt-[5px]'>* Si opta por una matrícula por tres años debe pagar el valor de 50 aportes</p>
 
@@ -49,7 +48,7 @@ function ReqMatriculaTransitoria() {
             <p className='mt-[5px]'>* Una vez cumplido el plazo de vigencia de matrícula, la misma queda automáticamente cancelada, lo cual se comunica a los Juzgados y Colegios de la provincia.</p>
 
 </p>
-
+<a href="/upload/DeclaracionJuradaAusenciaDeAntecedentes.docx" className='text-[14px] underline font-bold m-[15px] hover:text-[#0F0D3C]'>Declaración Jurada de Ausencia de Antecedentes Penales</a>
         </div>
         <p className='text-[14px] font-bold m-[15px]'>
         Solicitud de inscripción para matrícula

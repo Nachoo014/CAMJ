@@ -33,6 +33,11 @@ const enlaces = [
     nombre: "ARCA",
     href: "https://www.afip.gob.ar/landing/default.asp",
   },
+  {
+    id: 6,
+    nombre: "FACA",
+    href: "https://faca.org.ar/",
+  },
 ];
 
 function Enlaces() {
