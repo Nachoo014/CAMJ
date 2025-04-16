@@ -25,17 +25,18 @@ function HerramientasOnline() {
         Convenio casilleros notificaciones
       </Link>
       <Link
-        href="/JuzgadosyJuecesdePaz"
+        to="/CodigoarancelariodeabogadosdeCordoba"
         className="px-6 m-2 py-3 text-[15px] xl:text-[18px] w-[300px] xl:w-[40%] text-center border-[#15171c] border-2 text-black font-semibold rounded-md hover:bg-[#15171c] hover:text-white transition duration-300 shadow-md"
       >
-        Ley 9459
+        Código arancelario de abogados de Cordoba
       </Link>
-      <Link
-        href="/JuzgadosyJuecesdePaz"
+      <a
+        href="/upload/LEYN°5805-LeydeColegiaciónObligatoria.pdf"
+        download
         className="px-6 m-2 py-3 text-[15px] xl:text-[18px] w-[300px] xl:w-[40%] text-center border-[#15171c] border-2 text-black font-semibold rounded-md hover:bg-[#15171c] hover:text-white transition duration-300 shadow-md"
       >
-        Ley 5805
-      </Link>
+        LEY N° 5805 - Ley de Colegiación Obligatoria
+      </a>
     </div>
   );
 }

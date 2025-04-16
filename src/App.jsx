@@ -26,6 +26,7 @@ import ComisionJovenes from './pages/ComisionJovenes';
 import AbodagoDeNiño from './pages/AbodagoDeNiño';
 import ConvenioCasilleroNotificaciones from './pages/ConvenioCasilleroNotificaciones';
 import Delegacion from './pages/Delegacion';
+import CodigoarancelariodeabogadosdeCordoba from './pages/CodigoarancelariodeabogadosdeCordoba';
 
 
 
@@ -45,6 +46,7 @@ function App() {
           <Route path="/ComisiondeJovenes" element={<ComisionJovenes/>} />
           <Route path="/Delegacion" element={<Delegacion/>} />
           <Route path="/Conveniocasillerosnotificaciones" element={<ConvenioCasilleroNotificaciones/>} />
+          <Route path="/CodigoarancelariodeabogadosdeCordoba" element={<CodigoarancelariodeabogadosdeCordoba/>} />
           <Route path="/Herramientas" element={<HerramientasOnline/>} />
           <Route path="/Jurisprudencia" element={<Jurisprudencia/>} />
           <Route path="/ConveniosyBeneficios" element={<Convenio/>} />
