@@ -27,7 +27,7 @@ function CodigoarancelariodeabogadosdeCordoba() {
           href="/upload/LEYN°11042.pdf"
           download
         >
-          LEY N° 11042
+          LEY N° 11042 - Actualizada 
         </a>
       </div>
     </>
