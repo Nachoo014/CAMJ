@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Inicio.css";
-import ImgConvenios1 from "../assets/ConveniosyBeneficios.jpg"
-import ImgConvenios2 from "../assets/ConveniosyBeneficios2.jpg"
+import ImgConvenios1 from "../assets/ConveniosyBeneficios.png"
+import ImgConvenios2 from "../assets/ConveniosyBeneficios2.png"
 
 function Convenio() {
   return (
@@ -16,7 +16,9 @@ function Convenio() {
     </div>
   </div>
     <div className='flex flex-col justify-center items-center my-5'>
-            <img className='p-2 md:max-w-[750px]' src={ImgConvenios1} alt="" />
+            <img className='p-2 md:max-w-[750px] shadow-lg' src={ImgConvenios1} alt="" />
+            <img className='p-2 md:max-w-[750px] shadow-lg' src={ImgConvenios2} alt="" />
+
 
             <p className='text-[12px] md:text-[15px] font-bold p-2 text-gray-700'>Recuerde, colega, leer los detalles y condiciones y presentar el carnet de abogado/a al momento de abonar.</p>
             <p className='text-[12px] md:text-[15px] font-bold p-2 text-gray-700'>Convenios actualizados a noviembre del 2024.</p>
