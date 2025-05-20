@@ -34,9 +34,14 @@ const enlaces = [
     href: "https://www.afip.gob.ar/landing/default.asp",
   },
   {
-    id: 6,
+    id: 7,
     nombre: "FACA",
     href: "https://faca.org.ar/",
+  },
+  {
+    id: 8,
+    nombre: "CORREO OFICIAL DE OFICINAS DE LAS SEDES JUDICIALES INTERIOR",
+    href: "/upload/CorreoInterior.pdf",
   },
 ];
 
