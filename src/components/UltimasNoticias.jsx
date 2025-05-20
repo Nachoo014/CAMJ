@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./Style.css";
 import * as motion from "motion/react-client";
-import noticias from "../data/noticias.json";
+import noticias from "../data/noticias.json"
 
 const isFacebookVideoUrl = (url) => {
   return url.includes("facebook.com") && (url.includes("video") || url.includes("watch"));
