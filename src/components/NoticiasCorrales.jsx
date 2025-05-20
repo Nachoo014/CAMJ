@@ -1,75 +1,126 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import Slider from "react-slick";
 import "./Style.css";
 import ImgConstruccionTribunales from "../assets/CAMJTRIBUNALESCB_CONTRUCCION.png";
 import CAMJCB_COE from "../assets/camj-corral-de-bustos-coe.png";
 import CAMJCB_DIA_INHABIL from "../assets/CAMJFiscaliaDiaInhabil.png";
+import noticias from "../data/noticias.json";
 
+// Import react-slick CSS
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
+// Custom arrow components for navigation
+const NextArrow = ({ onClick }) => (
+  <button
+    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full z-10"
+    onClick={onClick}
+  >
+    →
+  </button>
+);
 
+const PrevArrow = ({ onClick }) => (
+  <button
+    className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full z-10"
+    onClick={onClick}
+  >
+    ←
+  </button>
+);
 
-function NoticiasCorrales() {
-  const noticias = [
-    {
-      id: 1,
-      img: [ImgConstruccionTribunales,], // Múltiples imágenes
-      titulo: "Construcción de Tribunales Corral de Bustos",
-      fecha: "6 de octubre de 2023",
-      contenido: [
-        "Publicamos los Planos y el Estudio de Suelo de la obra de construcción del nuevo edificio de Tribunales Corral de Bustos – Iflinger a fines de colaborar con la difusión y publicidad para las propuestas de presentación de oferentes.",
-        "Rogamos aguardar la carga de los archivos pdf incrustados en esta noticia; están aptos y disponibles para su descarga.",
-        "Los pliegos de la licitación pública podrán ser consultados en la Oficina de Contrataciones del Área de Administración (Arturo M. Bas 158, primer piso).",
-        "Para mayor información, los interesados podrían comunicarse al teléfono (0351) 4481014, internos 37041, 37046, 37052, en días hábiles, de 8 a 14 horas",
-      ],
-      descargas: [
-        { nombre: "03-Lic. Obra Corral de Bustos – Planos_compressed", url: "/upload/03-Lic.-Obra-Corral-de-Bustos-Planos_compressed.pdf" },
-        { nombre: "04-Lic. Obra Corral de Bustos – Estudio de suelos", url: "/upload/04-Lic.-Obra-Corral-de-Bustos-Estudio-de-suelos.pdf" },
-      ],
-    },
-    {
-      id: 2,
-      img: [CAMJCB_COE], // Una sola imagen
-      titulo: "Solicitamos la apertura de Tribunales Corral de Bustos y de Juzgados de Paz de la zona",
-      fecha: "27 de abril de 2020",
-      contenido: [
-        "El Colegio de Abogados del Departamento Marcos Juárez y su Delegación Corral de Bustos solicitaron al Intendente de Corral de Bustos Ifflinger Roberto Pacheco, ciudad sede de Tribunales Corral de Bustos, y por su intermedio al COE Villa María la rehabilitación del Palacio de Justicia local y las sedes de la Justicia de Paz de la región.",
-        "Además, en la misiva de esta mañana, se pidió la autorización para el desarrollo de las tareas profesionales de abogados y empleados en el ámbito de nuestros estudios jurídicos, con la debida posibilidad de circulación para el cumplimiento de dichas tareas y la apertura de la Delegación del Colegio de Abogados de esta Ciudad de Corral de Bustos-Ifflinger.",
-        "En una parte de la carta, se destaca «que el interior provincial no vive la misma realidad que la capital en cuanto a la evolución y propagación del COVID-19, y que los Tribunales y Juzgados de Paz del departamento Marcos Juárez se hayan -en su mayoría- adaptados para la prestación del servicio de justicia«.",
-        "Además, «cabe mencionar que los edificios donde funcionan los Tribunales de Competencia Múltiple de Corral Bustos, la Asesoría Letrada y el Ministerio Público Fiscal en esta Ciudad, son independientes entre sí ubicándose en diferentes sectores de la Ciudad, lo que contribuye al cumplimiento del aislamiento social obligatorio dispuesto en el orden nacional. Asimismo, y para contribuir al sostenimiento de las normas sanitarias dispuestas, creemos conveniente y proponemos un la implementación de un sistema de turnos presenciales para los colegiados otorgados por los funcionarios del Poder Judicial de la sede con el debido resguardo sanitario, así como la implementación y puesta en funcionamiento de todos los mecanismos tecnológicos habilitados (correo electrónicos, llamadas telefónicas, videollamadas, y cualquier otro que la autoridad estime conveniente) para la comunicación directa con los colegiados a fin de contribuir con la puesta en marcha del sistema judicial«.",
-        "En la Delegación, que funciona en el edificio sito en calle Av. Santa Fe N°253 de Corral de Bustos Ifflinger, trabaja únicamente una secretaria, contando con instalaciones lo suficientemente amplias para que la misma pueda desarrollar sus tareas manteniendo la distancia social requerida. Incluso, el horario de atención es sólo por la mañana hasta las 13 horas.-",
-        "«Que de más está recordar que es vital el funcionamiento de la Justicia como servicio esencial del Estado de Derecho, por lo que, sin desconocer el riesgo de la Pandemia y las precauciones que todos debemos tomar para evitar su propagación, creemos factible el retorno de la actividad con las limitaciones antes mencionadas, con más todas aquellas que el COE pudiera exigir» cierra la carta firmada por la Presidente de la Delegación Corral de Bustos del Colegio de Abogados Departamento Marcos Juárez Dra. María Laura Casinghino y la Dra. Ma. Isabel D’Onofrio, presidenta del Colegio de Abogados del Departamento Marcos Juárez .",
-        "Adjuntamos la Carta",
-      ],
+// MediaSlider component
+const MediaSlider = ({ noticia }) => {
+  if (!noticia?.img?.length) return null;
 
-    },{
-      id: 2,
-      img: [CAMJCB_COE], // Una sola imagen
-      titulo: "Solicitamos la apertura de Tribunales Corral de Bustos y de Juzgados de Paz de la zona",
-      fecha: "27 de abril de 2020",
-      contenido: [
-        "El Colegio de Abogados del Departamento Marcos Juárez y su Delegación Corral de Bustos solicitaron al Intendente de Corral de Bustos Ifflinger Roberto Pacheco, ciudad sede de Tribunales Corral de Bustos, y por su intermedio al COE Villa María la rehabilitación del Palacio de Justicia local y las sedes de la Justicia de Paz de la región.",
-        "Además, en la misiva de esta mañana, se pidió la autorización para el desarrollo de las tareas profesionales de abogados y empleados en el ámbito de nuestros estudios jurídicos, con la debida posibilidad de circulación para el cumplimiento de dichas tareas y la apertura de la Delegación del Colegio de Abogados de esta Ciudad de Corral de Bustos-Ifflinger.",
-        "En una parte de la carta, se destaca «que el interior provincial no vive la misma realidad que la capital en cuanto a la evolución y propagación del COVID-19, y que los Tribunales y Juzgados de Paz del departamento Marcos Juárez se hayan -en su mayoría- adaptados para la prestación del servicio de justicia«.",
-        "Además, «cabe mencionar que los edificios donde funcionan los Tribunales de Competencia Múltiple de Corral Bustos, la Asesoría Letrada y el Ministerio Público Fiscal en esta Ciudad, son independientes entre sí ubicándose en diferentes sectores de la Ciudad, lo que contribuye al cumplimiento del aislamiento social obligatorio dispuesto en el orden nacional. Asimismo, y para contribuir al sostenimiento de las normas sanitarias dispuestas, creemos conveniente y proponemos un la implementación de un sistema de turnos presenciales para los colegiados otorgados por los funcionarios del Poder Judicial de la sede con el debido resguardo sanitario, así como la implementación y puesta en funcionamiento de todos los mecanismos tecnológicos habilitados (correo electrónicos, llamadas telefónicas, videollamadas, y cualquier otro que la autoridad estime conveniente) para la comunicación directa con los colegiados a fin de contribuir con la puesta en marcha del sistema judicial«.",
-        "En la Delegación, que funciona en el edificio sito en calle Av. Santa Fe N°253 de Corral de Bustos Ifflinger, trabaja únicamente una secretaria, contando con instalaciones lo suficientemente amplias para que la misma pueda desarrollar sus tareas manteniendo la distancia social requerida. Incluso, el horario de atención es sólo por la mañana hasta las 13 horas.-",
-        "«Que de más está recordar que es vital el funcionamiento de la Justicia como servicio esencial del Estado de Derecho, por lo que, sin desconocer el riesgo de la Pandemia y las precauciones que todos debemos tomar para evitar su propagación, creemos factible el retorno de la actividad con las limitaciones antes mencionadas, con más todas aquellas que el COE pudiera exigir» cierra la carta firmada por la Presidente de la Delegación Corral de Bustos del Colegio de Abogados Departamento Marcos Juárez Dra. María Laura Casinghino y la Dra. Ma. Isabel D’Onofrio, presidenta del Colegio de Abogados del Departamento Marcos Juárez .",
-        "Adjuntamos la Carta",
-      ],
+  const isVideo = (url) => {
+    const videoExtensions = [".mp4", ".webm", ".ogg"];
+    const imageExtensions = [".jpg", ".jpeg", ".png", ".gif", ".bmp"];
 
-    },
-    {
-        id: 3,
-        img: [CAMJCB_DIA_INHABIL], // Una sola imagen
-        titulo: "Viernes 4 de octubre día inhábil en Fiscalías Corral de Bustos",
-        fecha: "3 de octubre de 2019",
-        contenido: [
-            "Es por la mudanza de la Fiscalía de Instrucción con Funciones de Fiscalía de Menores y Familia al nuevo edificio ubicado en Sarmiento Nº 36 de Corral de Bustos Ifflinger, ciudad sede de nuestra Delegación.",
-            "El Acuerdo Nº 841 – “A” del Tribunal Superior de Justicia de la Provincia de Córdoba declara día inhábil a los fines procesales el viernes 4 de octubre de 2019 las dependencias de la Fiscalía de Corral de Bustos Ifflinger mencionada y dispone que los funcionarios y empleados asistan a prestar servicio en el horario habitual, sin perjuicio de las medidas que de carácter urgente deban ser tomadas por el titular de la misma.",
-            "Dicha notificación fue firmada por la Sra. Presidenta del TSJ Dra. María Marta Cáceres de Bollati y los Sres. Vocales Dres. Aída Lucía Teresa Tarditti, Luis Enrique Rubio y Sebastián López Peña con la asistencia del Sr. Director Gral. del Área de Administración a cargo de la Administración Gral. del Poder Judicial, Lic. César Augusto Bartolomei.",
-        ],
-  
+    // Si la URL termina en una extensión de imagen, no es video, incluso si es de Google Drive
+    if (imageExtensions.some((ext) => url.toLowerCase().endsWith(ext))) {
+      return false;
+    }
+
+    // Solo consideramos video si es de Google Drive Y no es una imagen
+    return (
+      (url.includes("drive.google.com") &&
+        !imageExtensions.some((ext) => url.toLowerCase().endsWith(ext))) ||
+      url.includes("facebook.com") ||
+      videoExtensions.some((ext) => url.toLowerCase().endsWith(ext))
+    );
+  };
+
+  const settings = {
+    dots: noticia.img.length > 1,
+    infinite: noticia.img.length > 1,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: noticia.img.length > 1 ? <NextArrow /> : null,
+    prevArrow: noticia.img.length > 1 ? <PrevArrow /> : null,
+    adaptiveHeight: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+        },
       },
-  ];
+    ],
+  };
+
+  return (
+    <div className="mb-4 max-w-full mx-auto">
+      <Slider {...settings}>
+        {noticia.img.map((media, index) => (
+          <div key={index} className="px-2">
+            {isVideo(media) ? (
+              media.includes("facebook.com") ? (
+                <iframe
+                  src={media.replace("/share/v/", "/plugins/video.php?href=") + "&show_text=false"}
+                  className="w-full h-[500px] rounded-lg shadow"
+                  style={{ border: "none", overflow: "hidden" }}
+                  scrolling="no"
+                  frameBorder="0"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  allowFullScreen
+                  title={`Video de Facebook ${index + 1}`}
+                ></iframe>
+              ) : (
+                <video
+                  className="w-full h-[500px] object-contain rounded-lg shadow"
+                  controls
+                  onError={(e) => {
+                    console.error("Error al cargar video:", media);
+                    e.target.style.display = "none";
+                    e.target.nextSibling.style.display = "block";
+                  }}
+                >
+                  <source src={media} type="video/mp4" />
+                  Tu navegador no soporta videos.
+                </video>
+              )
+            ) : (
+              <img
+                src={media}
+                className="w-full h-[500px] object-contain rounded-lg shadow"
+                alt={`Imagen ${index + 1}`}
+                loading="lazy"
+                onError={(e) => {
+                  console.error("Error al cargar imagen:", media);
+                }}
+              />
+            )}
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+};
+function NoticiasCorrales() {
+ 
 
   const { id } = useParams();
   const noticia = noticias.find((n) => n.id === parseInt(id));
@@ -78,19 +129,8 @@ function NoticiasCorrales() {
 
   return (
     <div className="max-w-4xl mx-auto my-[150px] p-6 bg-white shadow-lg rounded-lg">
-      {/* Renderiza imágenes si existen */}
-      {noticia?.img?.length > 0 && (
-        <div className="flex flex-wrap justify-center gap-4 mb-4">
-          {noticia.img.map((imagen, index) => (
-            <img
-              key={index}
-              src={imagen}
-              className="w-full md:w-1/2 rounded-lg shadow"
-              alt={`Imagen ${index + 1}`}
-            />
-          ))}
-        </div>
-      )}
+      {/* Renderiza el slider de imágenes/videos si existen */}
+      <MediaSlider noticia={noticia} />
 
       {/* Título y fecha */}
       <h1 className="text-3xl font-bold text-center mb-2 underline">
@@ -130,6 +170,7 @@ function NoticiasCorrales() {
               {archivo.nombre}
             </a>
           ))}
+
         </div>
       )}
     </div>

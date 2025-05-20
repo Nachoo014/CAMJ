@@ -3,7 +3,7 @@ import "./Inicio.css";
 import * as motion from "motion/react-client";
 import Links from "../components/Links";
 import TramitesMatricula from "../components/TramitesMatricula";
-import ResumenNoticias from "../components/ResumenNoticias";
+import UltimasNoticias from "../components/UltimasNoticias";
 function Inicio() {
   return (
     <>
@@ -33,7 +33,7 @@ function Inicio() {
         </div>
       </div>
       <Links></Links>
-      <ResumenNoticias />
+      <UltimasNoticias></UltimasNoticias>
     </>
   );
 }

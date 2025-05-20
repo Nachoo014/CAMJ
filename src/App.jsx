@@ -59,8 +59,7 @@ function App() {
           <Route path="/AfiliarsealaCajadeAbogados" element={<AfiliarseCajaAbogados/>} />
           <Route path="/Solicitudcertificadodematricula" element={<Solicitudcertificadodematricula/>} />
           <Route path="/noticias" element={<Noticias />} />
-          <Route path="/noticias/:id" element={<Noticia />} />
-          <Route path="/DelegacionCorral/:id" element={<NoticiasCorrales />} />
+          <Route path="/noticias/:id" element={<NoticiasCorrales />} />
           <Route path="*" element={<NotFound />} />
           
         </Routes>
