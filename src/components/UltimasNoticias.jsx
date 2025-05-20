@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./Style.css";
 import * as motion from "motion/react-client";
-import noticias from "../data/noticias.json"
+import noticias from "../data/noticias.json";
 
 const isFacebookVideoUrl = (url) => {
   return url.includes("facebook.com") && (url.includes("video") || url.includes("watch"));
@@ -33,7 +33,7 @@ function UltimasNoticias() {
       >
         Ultimas Noticias
       </motion.h1>
-      <div className="flex flex-col xl:flex-row-reverse justify-center items-stretch gap-6 px-[100px] py-8 w-full max-w-[1200px]">
+      <div className="flex flex-col xl:flex-row-reverse justify-center items-center xl:items-stretch gap-6 px-[100px] py-8 w-full max-w-[1200px]">
         {UltimasNoticias.map((news) => (
           <div
           key={news.id}
