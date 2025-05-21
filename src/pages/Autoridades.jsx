@@ -29,23 +29,6 @@ function Autoridades() {
         nombreCompleto:"Dr. José Martín DONATO"
         
       }]
-      const DirectivosCB = [{
-        id: 1,
-        puesto:"PRESIDENTE:",
-        nombreCompleto:"Dra. Carolina GOBBATO"
-      },
-      {
-        id: 2,
-        puesto:"SECRETARIO:",
-        nombreCompleto:"Dr. Gonzalo JAUREGUIALZO",
-        
-      },
-      {
-        id: 3,
-        puesto:"TESORERA",
-        nombreCompleto:"Dra. Cristina Laura GRECO"
-        
-      }]
 
       const vocTitMsJz = [
         {
@@ -70,7 +53,7 @@ function Autoridades() {
         },
         {
             id:6,
-            nombreCompleto:"Dra. Jesica Marisel TORRES",
+            nombreCompleto:"Dra. Jesica Maricel TORRES",
         },
       ]
       const vocSupMsJz = [
@@ -98,35 +81,7 @@ function Autoridades() {
             id:6,
             nombreCompleto:"Dr. Emiliano MIRAVALLES",
         },
-      ]
-      const vocTitCB = [
-        {
-            id:1,
-            nombreCompleto:"Dra. María Eugenia ZUÑIGA",
-        },
-        {
-            id:2,
-            nombreCompleto:"Dr. Federico AIROLDI",
-        },
-        {
-            id:3,
-            nombreCompleto:"Dr. Cristian Horacio DI LORENZO",
-        },
-      ]
-      const vocSupCB = [
-        {
-            id:1,
-            nombreCompleto:"Dra. Virginia RON",
-        },
-        {
-            id:2,
-            nombreCompleto:"Dra. María Laura CASINGHINO",
-        },
-        {
-            id:3,
-            nombreCompleto:"Dra. Valeria Soledad CHICCO",
-        },
-      ]
+      ]     
     return (
         <>
         <div className="relative w-screen h-[150px] mt-[90px] bg-[url('./assets/FondoTramiteMatricula.jpg')] bg-cover bg-center">
